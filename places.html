@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Địa Điểm - Nhịp Sống Việt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-heart-pulse"></i> Nhịp Sống Việt</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Sự Kiện</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="places.html">Địa Điểm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="food.html">Ẩm Thực</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                    </ul>
+                    
+                        <div class="d-flex">
+                            <a href="sign-in.html" class="btn btn-outline-light me-2">Đăng Nhập</a>
+                            <a href="sign-up.html" class="btn btn-warning">Đăng Ký</a>
+                        </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4">Khám Phá Địa Điểm</h1>
+            <p class="lead">Những danh lam thắng cảnh và di tích lịch sử nổi tiếng</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row mb-4 p-3 bg-white rounded shadow-sm" id="place-filter-bar">
+            <div class="col-md-6 mb-2">
+                <select class="form-select" id="filter-place-region">
+                    <option value="all">Tất cả vùng miền</option>
+                    <option value="bac">Miền Bắc</option>
+                    <option value="trung">Miền Trung</option>
+                    <option value="nam">Miền Nam</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-2">
+                <select class="form-select" id="filter-place-type">
+                    <option value="all">Tất cả loại hình</option>
+                    <option value="thien-nhien">Thiên nhiên</option>
+                    <option value="lich-su">Lịch sử</option>
+                    <option value="van-hoa">Văn hóa</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+
+                                <!-- Card 1: Hồ Hoàn Kiếm -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="bac" data-type="lich-su">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://statics.vinpearl.com/ho-hoan-kiem-21_1688885249.jpg" class="card-img-top" alt="Hồ Hoàn Kiếm">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Hồ Hoàn Kiếm</h5>
+                            <p class="card-text">Trái tim của thủ đô Hà Nội, gắn liền với truyền thuyết lịch sử hào hùng.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Hồ Hoàn Kiếm" data-place-img="images/place-1.jpg" data-place-description="Hồ Hoàn Kiếm, còn được gọi là Hồ Gươm, là một hồ nước ngọt tự nhiên nằm ở trung tâm Hà Nội, gắn liền với truyền thuyết trả gươm báu cho Rùa Vàng.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Phố cổ Hội An -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="trung" data-type="van-hoa">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz483T5iwG_un5Putr2h8Sdgq57G1kQhjPviNojQyiRU55Ai7ORzAX4uuFMD84_DD0pC5iR4ZY5V5G14OT9AA-G3LZ6eFsT4w7xpUItQ6Mss8Ji6pc989p2_kYLjoshtA_xuPsrfw=w675-h390-n-k-no" class="card-img-top" alt="Phố cổ Hội An">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Phố Cổ Hội An</h5>
+                            <p class="card-text">Vẻ đẹp cổ kính, trầm mặc với những con phố đèn lồng lung linh.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Phố Cổ Hội An" data-place-img="images/place-2.jpg" data-place-description="Được UNESCO công nhận là Di sản Văn hóa Thế giới, Hội An mang một vẻ đẹp kiến trúc truyền thống độc đáo với những ngôi nhà cổ, hội quán và con đường nhỏ yên bình.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Vịnh Hạ Long -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="bac" data-type="thien-nhien">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef6da51f0c0ad991901283c66f347bc9e4685e90a6d43591956557c1247283a022cf57c2a816edb3be3cd0e904b555bd11/halongbay-3501.jpg" class="card-img-top" alt="Vịnh Hạ Long">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Vịnh Hạ Long</h5>
+                            <p class="card-text">Kỳ quan thiên nhiên thế giới với hàng ngàn hòn đảo đá vôi hùng vĩ.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Vịnh Hạ Long" data-place-img="images/place-3.jpg" data-place-description="Kỳ quan thiên nhiên thế giới với hàng ngàn hòn đảo đá vôi hùng vĩ trên mặt nước xanh biếc, tạo nên một bức tranh thủy mặc khổng lồ.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Thác Bản Giốc -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="bac" data-type="thien-nhien">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://hanotour.com.vn/upload_images/images/thac_B%E1%BA%A3n_Gi%E1%BB%91c.jpg" class="card-img-top" alt="Thác Bản Giốc">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Thác Bản Giốc</h5>
+                            <p class="card-text">Một trong những thác nước hùng vĩ và đẹp nhất Việt Nam trên đường biên giới.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Thác Bản Giốc" data-place-img="images/place-4.jpg" data-place-description="Một trong những thác nước hùng vĩ và đẹp nhất Việt Nam, nằm trên đường biên giới Việt - Trung, với dòng nước tuôn trào trắng xóa giữa núi rừng xanh thẳm.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Sapa -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="bac" data-type="thien-nhien">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://xesaoviet.com.vn/wp-content/uploads/2024/08/nui-ham-rong-acc-1.png" class="card-img-top" alt="Sapa">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sapa</h5>
+                            <p class="card-text">Thị trấn trong sương với những thửa ruộng bậc thang kỳ vĩ và văn hóa bản địa đặc sắc.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Sapa" data-place-img="images/place-5.jpg" data-place-description="Thị trấn trong sương với những thửa ruộng bậc thang kỳ vĩ, văn hóa bản địa đặc sắc và đỉnh Fansipan hùng vĩ - nóc nhà Đông Dương.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Đồi Cát Bay -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="trung" data-type="thien-nhien">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://dulichviet.com.vn/images/bandidau/kham-pha-ve-dep-kho-cuong-cua-doi-cat-trong-chuyen-du-lich-mui-ne-phan-thiet.jpg" class="card-img-top" alt="Đồi cát">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Đồi Cát Bay</h5>
+                            <p class="card-text">Được mệnh danh là 'Tiểu sa mạc' của Việt Nam, nổi tiếng với triền cát thay đổi hình dạng.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Đồi Cát Bay" data-place-img="images/place-6.jpg" data-place-description="Được mệnh danh là 'Tiểu sa mạc Sahara' của Việt Nam, Đồi Cát Bay tại Mũi Né nổi tiếng với những triền cát thay đổi hình dạng liên tục theo hướng gió.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Đà Lạt -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="trung" data-type="thien-nhien">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://cdn-media.sforum.vn/storage/app/media/wp-content/uploads/2024/01/dia-diem-du-lich-da-lat-thumbnail.jpg" class="card-img-top" alt="Đà Lạt">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Đà Lạt</h5>
+                            <p class="card-text">Thành phố ngàn hoa với khí hậu mát mẻ và những rừng thông thơ mộng.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Đà Lạt" data-place-img="images/place-7.jpg" data-place-description="Thành phố ngàn hoa với khí hậu mát mẻ quanh năm, những rừng thông thơ mộng, hồ Xuân Hương yên bình và kiến trúc Pháp cổ kính.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Văn Miếu - Quốc Tử Giám -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="bac" data-type="lich-su">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/1200px-Hanoi_Temple_of_Literature_%28cropped%29.jpg" class="card-img-top" alt="Văn Miếu - Quốc Tử Giám">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Văn Miếu - Quốc Tử Giám</h5>
+                            <p class="card-text">Trường đại học đầu tiên của Việt Nam, biểu tượng của nền văn hiến và tri thức ngàn năm.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Văn Miếu - Quốc Tử Giám" data-place-img="images/place-8.jpg" data-place-description="Không chỉ là một di tích lịch sử, Văn Miếu - Quốc Tử Giám còn là nơi các sĩ tử ngày nay đến cầu may mắn trước mỗi kỳ thi quan trọng.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9: Kinh thành Huế -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="trung" data-type="lich-su">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://sinaitravel.com.vn/upload/images/blogs/5%20ly%20do%20phai%20den%20kinh%20thanh%20hue%20mot%20lan%20trong%20doi%201.jpg" class="card-img-top" alt="Kinh thành Huế">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Kinh thành Huế</h5>
+                            <p class="card-text">Quần thể di tích Cố đô Huế, nơi lưu giữ dấu ấn vàng son của triều đại nhà Nguyễn.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Kinh thành Huế" data-place-img="images/place-9.jpg" data-place-description="Một quần thể kiến trúc đồ sộ bao gồm Hoàng Thành và Tử Cấm Thành, nơi lưu giữ nhiều giá trị lịch sử, văn hóa và nghệ thuật của triều đại phong kiến cuối cùng.">Xem Chi Tiệt</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10: Dinh Độc Lập -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="nam" data-type="lich-su">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://bizweb.dktcdn.net/100/101/075/files/dinh-b4f141da-430d-4d98-858a-78c5b03024cc.jpg?v=1564819379879" class="card-img-top" alt="Dinh Độc Lập">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dinh Độc Lập</h5>
+                            <p class="card-text">Chứng nhân lịch sử quan trọng, gắn liền với sự kiện thống nhất đất nước 30/4/1975.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Dinh Độc Lập" data-place-img="images/place-10.jpg" data-place-description="Còn được gọi là Hội trường Thống Nhất, đây là nơi diễn ra sự kiện trọng đại, kết thúc Chiến tranh Việt Nam và thống nhất đất nước.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11: Chợ Bến Thành -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="nam" data-type="van-hoa">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://cdn2.tuoitre.vn/zoom/700_525/471584752817336320/2023/10/16/cho-ben-thanh-16974315197922025739761-208-0-1255-2000-crop-16974315958211438511062.jpg" class="card-img-top" alt="Chợ Bến Thành">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chợ Bến Thành</h5>
+                            <p class="card-text">Biểu tượng sầm uất và là trung tâm giao thương náo nhiệt của Sài Gòn xưa và nay.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Chợ Bến Thành" data-place-img="images/place-11.jpg" data-place-description="Một trong những ngôi chợ lâu đời nhất tại Sài Gòn, nơi du khách có thể tìm thấy mọi thứ từ hàng thủ công mỹ nghệ, vải vóc cho đến ẩm thực đường phố đặc sắc.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12: Đồng bằng sông Cửu Long -->
+                <div class="col-lg-4 col-md-6 mb-4 place-card" data-region="nam" data-type="thien-nhien">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://bcp.cdnchinhphu.vn/334894974524682240/2023/3/6/clg-16781030697102045767885.jpg" class="card-img-top" alt="Đồng bằng sông Cửu Long">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Đồng bằng sông Cửu Long</h5>
+                            <p class="card-text">Khám phá miền Tây sông nước với những khu chợ nổi độc đáo và miệt vườn trĩu quả.</p>
+                            <button type="button" class="btn btn-primary mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Đồng bằng sông Cửu Long" data-place-img="images/place-12.jpg" data-place-description="Trải nghiệm cuộc sống sông nước đặc trưng của người dân miền Tây, tham quan các khu chợ nổi Cái Răng, Phong Điền và thưởng thức trái cây tươi ngon tại vườn.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a></li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="placeDetailModal" tabindex="-1" aria-labelledby="placeDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalPlaceTitle">Đây là Tên Địa Điểm</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalPlaceImg" src="" class="img-fluid rounded mb-3" alt="Hình ảnh địa điểm">
+            <p id="modalPlaceDescription">Đây là mô tả chi tiết của địa điểm.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Nhịp Sống Việt</h5>
+                    <p>
+                        Cổng thông tin khám phá sự kiện, địa điểm, ẩm thực và văn hóa Việt Nam.
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Khám Phá</h5>
+                    <p><a href="events.html" class="text-white" style="text-decoration: none;">Sự Kiện</a></p>
+                    <p><a href="places.html" class="text-white" style="text-decoration: none;">Địa Điểm</a></p>
+                    <p><a href="food.html" class="text-white" style="text-decoration: none;">Ẩm Thực</a></p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Liên Hệ</h5>
+                    <p><i class="fas fa-home me-3"></i> Hà Nội, Việt Nam</p>
+                    <p><i class="fas fa-envelope me-3"></i> contact@nhipsongviet.vn</p>
+                    <p><i class="fas fa-phone me-3"></i> + 84 123 456 789</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2025 Bản quyền thuộc về:
+                        <a href="#" style="text-decoration: none;">
+                            <strong class="text-warning">Nhịp Sống Việt</strong>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

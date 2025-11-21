@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm Thực - Nhịp Sống Việt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-heart-pulse"></i> Nhịp Sống Việt</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Sự Kiện</a></li>
+                        <li class="nav-item"><a class="nav-link" href="places.html">Địa Điểm</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="food.html">Ẩm Thực</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                    </ul>
+                    
+                        <div class="d-flex">
+                            <a href="sign-in.html" class="btn btn-outline-light me-2">Đăng Nhập</a>
+                            <a href="sign-up.html" class="btn btn-warning">Đăng Ký</a>
+                        </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4">Thế Giới Ẩm Thực</h1>
+            <p class="lead">Khám phá những món ăn đặc sắc của ba miền Việt Nam</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+            <div class="row mb-4 p-3 bg-white rounded shadow-sm" id="food-filter-bar">
+                <div class="col-md-6 mb-2">
+                    <select class="form-select" id="filter-food-region">
+                        <option value="all">Tất cả vùng miền</option>
+                        <option value="bac">Miền Bắc</option>
+                        <option value="trung">Miền Trung</option>
+                        <option value="nam">Miền Nam</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <select class="form-select" id="filter-food-type">
+                        <option value="all">Tất cả loại món</option>
+                        <option value="mon-chinh">Món chính</option>
+                        <option value="an-vat">Ăn vặt</option>
+                    </select>
+                </div>
+            </div>
+
+        <div class="row">
+
+                <!-- Card 1: Phở Bò Hà Nội -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="bac" data-type="mon-chinh">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/kien-thuc/cach-nau-pho-bo-ha-noi/cach-nau-pho-bo-ha-noi-1.jpg" class="card-img-top" alt="Phở Bò">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Phở Bò Hà Nội</h5>
+                            <p class="card-text">Tinh hoa ẩm thực thủ đô với nước dùng thanh ngọt và thịt bò mềm thơm.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Phở Bò Hà Nội" data-food-img="images/food-1.jpg" data-food-suggestion="Địa chỉ gợi ý: 13 Lò Đúc, Hai Bà Trưng, Hà Nội (Phở Thìn) hoặc 49 Bát Đàn, Hoàn Kiếm, Hà Nội (Phở Bát Đàn).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bánh Mì Sài Gòn -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="nam" data-type="an-vat">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://static.vinwonders.com/production/banh-mi-sai-gon-2.jpg" class="card-img-top" alt="Bánh Mì Sài Gòn">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bánh Mì Sài Gòn</h5>
+                            <p class="card-text">Sự kết hợp hoàn hảo giữa vỏ bánh giòn rụm và nhân đa dạng, đậm đà.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Bánh Mì Sài Gòn" data-food-img="images/food-2.jpg" data-food-suggestion="Địa chỉ gợi ý: Bánh mì Huỳnh Hoa (26 Lê Thị Riêng, Quận 1, TP.HCM) hoặc Bánh mì Bảy Hổ (19 Huỳnh Khương Ninh, Quận 1, TP.HCM).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Bún Bò Huế -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="trung" data-type="mon-chinh">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://daivietourist.vn/wp-content/uploads/2025/04/quan-bun-bo-hue-1.jpg" class="card-img-top" alt="Bún Bò Huế">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bún Bò Huế</h5>
+                            <p class="card-text">Hương vị cay nồng đặc trưng của miền Trung, không thể chối từ.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Bún Bò Huế" data-food-img="images/food-3.jpg" data-food-suggestion="Địa chỉ gợi ý: 19 Lý Thường Kiệt, TP. Huế (Bún bò O Cương Chú Điệp) hoặc các chi nhánh Bún Bò Huế Đông Ba.">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Mì Quảng -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="trung" data-type="mon-chinh">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://daivietourist.vn/wp-content/uploads/2025/06/mi-quang-hoi-an-2.jpg" class="card-img-top" alt="Mì Quảng">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mì Quảng</h5>
+                            <p class="card-text">Sợi mì vàng óng, nước dùng đậm đà và các loại topping phong phú.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Mì Quảng" data-food-img="images/food-4.jpg" data-food-suggestion="Địa chỉ gợi ý: Mì Quảng Bà Mua (19 Trần Bình Trọng, Đà Nẵng) hoặc Mì Quảng Ếch Bếp Trang (24 Pasteur, Đà Nẵng).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Cao Lầu Hội An -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="trung" data-type="mon-chinh">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://i-giadinh.vnecdn.net/2023/03/13/Buoc-7-Thanh-pham-1-7-9577-1678700377.jpg" class="card-img-top" alt="Cao Lầu">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cao Lầu Hội An</h5>
+                            <p class="card-text">Món ăn đặc sản mang linh hồn phố cổ với sợi mì dai độc đáo.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Cao Lầu Hội An" data-food-img="images/food-5.jpg" data-food-suggestion="Địa chỉ gợi ý: Cao lầu Thanh (26 Thái Phiên, Hội An) hoặc Quán Cao lầu Liên (16 Thái Phiên, Hội An).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Gỏi Cuốn -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="nam" data-type="an-vat">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/2023_10_23_638336957766719361_cach-lam-goi-cuon.jpg" class="card-img-top" alt="Gỏi Cuốn">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Gỏi Cuốn</h5>
+                            <p class="card-text">Món ăn thanh mát, tươi ngon, chấm cùng nước mắm chua ngọt tuyệt hảo.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Gỏi Cuốn" data-food-img="images/food-6.jpg" data-food-suggestion="Địa chỉ gợi ý: Gỏi cuốn Tôm Nhảy (424 Lạc Long Quân, Quận 11, TP.HCM) hoặc các gánh hàng rong tại khu vực Quận 3.">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Chả Cá Lã Vọng -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="bac" data-type="mon-chinh">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/08/cha-ca-La-Vong.jpg" class="card-img-top" alt="Chả Cá Lã Vọng">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chả Cá Lã Vọng</h5>
+                            <p class="card-text">Đặc sản Hà thành trứ danh với cá lăng tẩm ướp nghệ, nướng thơm lừng trên than.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Chả Cá Lã Vọng" data-food-img="images/food-7.jpg" data-food-suggestion="Địa chỉ gợi ý: Nhà hàng Chả Cá Lã Vọng (14 phố Chả Cá, Hoàn Kiếm, Hà Nội).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Cơm Tấm Sườn Bì Chả -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="nam" data-type="mon-chinh">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://i-giadinh.vnecdn.net/2024/03/07/7Honthinthnhphm1-1709800144-8583-1709800424.jpg" class="card-img-top" alt="Cơm Tấm Sườn Bì Chả">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cơm Tấm Sườn Bì Chả</h5>
+                            <p class="card-text">Dĩa cơm tấm nóng hổi cùng sườn nướng, bì, chả trứng và nước mắm chua ngọt.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Cơm Tấm Sườn Bì Chả" data-food-img="images/food-8.jpg" data-food-suggestion="Địa chỉ gợi ý: Cơm tấm Ba Ghiền (84 Đặng Văn Ngữ, Phú Nhuận, TP.HCM) hoặc Cơm tấm Phúc Lộc Thọ (nhiều chi nhánh).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9: Bánh Xèo -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="nam" data-type="an-vat">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://tiki.vn/blog/wp-content/uploads/2023/07/thumb-5.jpg" class="card-img-top" alt="Bánh Xèo">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bánh Xèo</h5>
+                            <p class="card-text">Vỏ bánh vàng giòn tan, nhân tôm thịt giá đỗ, cuốn cùng rau sống tươi mát.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Bánh Xèo" data-food-img="images/food-9.jpg" data-food-suggestion="Địa chỉ gợi ý: Bánh xèo Ăn là ghiền (74 Sương Nguyệt Ánh, Quận 1, TP.HCM) hoặc Bánh xèo Mười Xiềm (nhiều chi nhánh).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10: Bún Chả Hà Nội -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="bac" data-type="mon-chinh">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://i-giadinh.vnecdn.net/2023/04/16/Buoc-11-Thanh-pham-11-7068-1681636164.jpg" class="card-img-top" alt="Bún Chả Hà Nội">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bún Chả Hà Nội</h5>
+                            <p class="card-text">Thịt nướng than hoa thơm lừng trong bát nước chấm đậm đà, ăn kèm bún và rau sống.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Bún Chả Hà Nội" data-food-img="images/food-10.jpg" data-food-suggestion="Địa chỉ gợi ý: Bún chả Hương Liên (24 Lê Văn Hưu, Hai Bà Trưng, Hà Nội) hoặc Bún chả Đắc Kim (1 Hàng Mành, Hoàn Kiếm, Hà Nội).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11: Nem Rán (Chả Giò) -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="bac" data-type="an-vat">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://onfoods.vn/wp-content/uploads/2025/03/images-2023-10-cach-lam-nem-ran-bang-noi-chien-khong-dau-gion-rum-1200x0-jpg.webp" class="card-img-top" alt="Nem Rán (Chả Giò)">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Nem Rán (Chả Giò)</h5>
+                            <p class="card-text">Món khai vị quen thuộc với lớp vỏ giòn rụm bao bọc nhân thịt và rau củ đậm đà.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Nem Rán (Chả Giò)" data-food-img="images/food-11.jpg" data-food-suggestion="Địa chỉ gợi ý: Nem rán/Chả giò thường có mặt trong hầu hết các nhà hàng món Việt, đặc biệt ngon tại Quán Ăn Ngon (18 Phan Bội Châu, Hà Nội).">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12: Chè Ba Màu -->
+                <div class="col-lg-4 col-md-6 mb-4 food-card" data-region="nam" data-type="an-vat">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://bizweb.dktcdn.net/thumb/grande/100/004/714/articles/che-ba-mau-cach-lam-ngon-mieng-dep-mat-ngay-tai-nha.png?v=1592454972940" class="card-img-top" alt="Chè Ba Màu">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chè Ba Màu</h5>
+                            <p class="card-text">Món tráng miệng giải nhiệt ngọt ngào với đậu xanh, sương sáo và nước cốt dừa.</p>
+                            <button type="button" class="btn btn-primary mt-auto food-detail-btn" data-bs-toggle="modal" data-bs-target="#foodDetailModal" data-food-title="Chè Ba Màu" data-food-img="images/food-12.jpg" data-food-suggestion="Địa chỉ gợi ý: Chè 4 Mùa (4 Hàng Cân, Hoàn Kiếm, Hà Nội) hoặc các quán chè lâu đời tại Chợ Lớn, TP.HCM.">Xem Địa Chỉ Gợi Ý</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a></li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="foodDetailModal" tabindex="-1" aria-labelledby="foodDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalFoodTitle">Đây là Tên Món Ăn</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalFoodImg" src="" class="img-fluid rounded mb-3" alt="Hình ảnh món ăn">
+            <p><strong><i class="fas fa-utensils me-2"></i>Gợi ý địa chỉ:</strong></p>
+            <p id="modalFoodSuggestion">Đây là địa chỉ gợi ý.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+         <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Nhịp Sống Việt</h5>
+                    <p>Cổng thông tin khám phá sự kiện, địa điểm, ẩm thực và văn hóa Việt Nam.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Khám Phá</h5>
+                    <p><a href="events.html" class="text-white" style="text-decoration: none;">Sự Kiện</a></p>
+                    <p><a href="places.html" class="text-white" style="text-decoration: none;">Địa Điểm</a></p>
+                    <p><a href="food.html" class="text-white" style="text-decoration: none;">Ẩm Thực</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Liên Hệ</h5>
+                    <p><i class="fas fa-home me-3"></i> Hà Nội, Việt Nam</p>
+                    <p><i class="fas fa-envelope me-3"></i> contact@nhipsongviet.vn</p>
+                    <p><i class="fas fa-phone me-3"></i> + 84 123 456 789</p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2025 Bản quyền thuộc về: <a href="#" style="text-decoration: none;"><strong class="text-warning">Nhịp Sống Việt</strong></a></p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

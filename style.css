@@ -1,0 +1,72 @@
+/* File: style.css (Bản cập nhật cuối cùng) */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    padding-top: 56px; /* Bằng chiều cao của navbar */
+    background-color: #f8f9fa; /* Màu nền nhẹ cho toàn trang */
+}
+
+/* --- Hero Section (Chỉ cho Trang Chủ) --- */
+#hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Page Header (Dùng chung cho TẤT CẢ các trang con) --- */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/page-header-bg.jpg') no-repeat center center/cover;
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+}
+
+/* --- Custom Card Style (Dùng chung) --- */
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: white;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* --- Form và các phần tử khác --- */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25); /* Màu vàng khi focus */
+    border-color: #ffc107;
+}
+
+/* --- Footer --- */
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #ffc107 !important; /* Màu warning của Bootstrap */
+}
+
+/*    CSS CHO TRANG ĐĂNG NHẬP / ĐĂNG KÝ    */
+.form-signin-wrapper {
+    background-color: #f8f9fa; /* Màu nền giống các section khác */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    min-height: 100vh;
+}

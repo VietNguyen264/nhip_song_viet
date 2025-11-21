@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhịp Sống Việt - Khám phá Việt Nam trong lòng bàn tay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-heart-pulse"></i> Nhịp Sống Việt</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Trang Chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Sự Kiện</a></li>
+                        <li class="nav-item"><a class="nav-link" href="places.html">Địa Điểm</a></li>
+                        <li class="nav-item"><a class="nav-link" href="food.html">Ẩm Thực</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                    </ul>
+                        <div class="d-flex">
+                            <a href="sign-in.html" class="btn btn-outline-light me-2">Đăng Nhập</a>
+                            <a href="sign-up.html" class="btn btn-warning">Đăng Ký</a>
+                        </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="d-flex align-items-center text-center">
+        <div class="container">
+            <h1 class="text-white display-4 fw-bold">Khám Phá Nhịp Đập Việt Nam</h1>
+            <p class="text-white-50 lead my-3">Tìm kiếm sự kiện, địa điểm và những trải nghiệm khó quên</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Nhập tên sự kiện, địa điểm, món ăn...">
+                        <button class="btn btn-warning btn-lg" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-events" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Sự Kiện Nổi Bật</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://danangfantasticity.com/wp-content/uploads/2023/04/le-hoi-phao-hoa-quoc-te-da-nang-2023-diff-2023-the-gioai-khong-khoang-canh-tu-02-06-den-08-07-2023.jpg" class="card-img-top" alt="Sự kiện 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Lễ hội pháo hoa quốc tế Đà Nẵng</h5>
+                            <p class="card-text text-muted"><i class="fa-regular fa-calendar-days me-2"></i>30/04 - 01/05</p>
+                            <p class="card-text text-muted"><i class="fa-solid fa-location-dot me-2"></i>Sông Hàn, Đà Nẵng</p>
+                            <button type="button" class="btn btn-primary mt-auto event-detail-btn" data-bs-toggle="modal" data-bs-target="#eventDetailModal" data-event-title="Lễ hội pháo hoa quốc tế Đà Nẵng" data-event-img="https://danangfantasticity.com/wp-content/uploads/2023/04/le-hoi-phao-hoa-quoc-te-da-nang-2023-diff-2023-the-gioai-khong-khoang-canh-tu-02-06-den-08-07-2023.jpg" data-event-location="Sông Hàn, Đà Nẵng" data-event-description="Bữa tiệc ánh sáng và âm nhạc hoành tráng trên sông Hàn, quy tụ các đội thi hàng đầu thế giới.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://i.ytimg.com/vi/j_DgpNqMcvc/maxresdefault.jpg" class="card-img-top" alt="Sự kiện 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Đêm nhạc "Chuyện của Mùa Thu"</h5>
+                            <p class="card-text text-muted"><i class="fa-regular fa-calendar-days me-2"></i>15/10</p>
+                            <p class="card-text text-muted"><i class="fa-solid fa-location-dot me-2"></i>Nhà Hát Lớn, Hà Nội</p>
+                            <button type="button" class="btn btn-primary mt-auto event-detail-btn" data-bs-toggle="modal" data-bs-target="#eventDetailModal" data-event-title="Đêm nhạc &quot;Chuyện của Mùa Thu&quot;" data-event-img="https://i.ytimg.com/vi/j_DgpNqMcvc/maxresdefault.jpg" data-event-location="Nhà Hát Lớn, Hà Nội" data-event-description="Một đêm nhạc sâu lắng, tái hiện những ca khúc bất hủ về mùa thu Hà Nội.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://image.plo.vn/w1000/Uploaded/2025/wpdhncwqr/2025_03_08/dieu-hanh-co-phuc-5-7862-4508.jpg.webp" class="card-img-top" alt="Sự kiện 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Lễ hội đường phố Sài Gòn</h5>
+                            <p class="card-text text-muted"><i class="fa-regular fa-calendar-days me-2"></i>Hàng tuần</p>
+                            <p class="card-text text-muted"><i class="fa-solid fa-location-dot me-2"></i>Phố đi bộ Nguyễn Huệ, TP.HCM</p>
+                            <button type="button" class="btn btn-primary mt-auto event-detail-btn" data-bs-toggle="modal" data-bs-target="#eventDetailModal" data-event-title="Lễ hội đường phố Sài Gòn" data-event-img="https://image.plo.vn/w1000/Uploaded/2025/wpdhncwqr/2025_03_08/dieu-hanh-co-phuc-5-7862-4508.jpg.webp" data-event-location="Phố đi bộ Nguyễn Huệ, TP.HCM" data-event-description="Không khí náo nhiệt với các màn trình diễn nghệ thuật, âm nhạc và diễu hành đầy màu sắc.">Xem Chi Tiết</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <a href="events.html" class="btn btn-outline-primary btn-lg">Xem Thêm Sự Kiện <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hot-places" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Địa Điểm Hot</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://statics.vinpearl.com/ho-hoan-kiem-21_1688885249.jpg" class="card-img-top" alt="Địa điểm 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Hồ Hoàn Kiếm</h5>
+                            <p class="card-text">Trái tim của thủ đô Hà Nội, gắn liền với truyền thuyết lịch sử hào hùng.</p>
+                            <button type="button" class="btn btn-outline-success mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Hồ Hoàn Kiếm" data-place-img="https://statics.vinpearl.com/ho-hoan-kiem-21_1688885249.jpg" data-place-description="Hồ Hoàn Kiếm, còn được gọi là Hồ Gươm, là một hồ nước ngọt tự nhiên nằm ở trung tâm Hà Nội, gắn liền với truyền thuyết trả gươm báu cho Rùa Vàng.">Khám Phá</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://bizweb.dktcdn.net/100/101/075/files/dinh-b4f141da-430d-4d98-858a-78c5b03024cc.jpg?v=1564819379879" class="card-img-top" alt="Địa điểm 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dinh Độc Lập</h5>
+                            <p class="card-text">Di tích lịch sử quan trọng, chứng nhân cho sự kiện giải phóng miền Nam.</p>
+                            <button type="button" class="btn btn-outline-success mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Dinh Độc Lập" data-place-img="https://bizweb.dktcdn.net/100/101/075/files/dinh-b4f141da-430d-4d98-858a-78c5b03024cc.jpg?v=1564819379879" data-place-description="Còn được gọi là Hội trường Thống Nhất, đây là nơi diễn ra sự kiện trọng đại, kết thúc Chiến tranh Việt Nam và thống nhất đất nước.">Khám Phá</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm custom-card">
+                        <img src="https://hoianheritage.net/uploads/bao-chi/2020_10/3142_hoiantown.jpg" class="card-img-top" alt="Địa điểm 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Phố Cổ Hội An</h5>
+                            <p class="card-text">Vẻ đẹp cổ kính, trầm mặc với những con phố đèn lồng lung linh.</p>
+                            <button type="button" class="btn btn-outline-success mt-auto place-detail-btn" data-bs-toggle="modal" data-bs-target="#placeDetailModal" data-place-title="Phố Cổ Hội An" data-place-img="https://hoianheritage.net/uploads/bao-chi/2020_10/3142_hoiantown.jpg" data-place-description="Được UNESCO công nhận là Di sản Văn hóa Thế giới, Hội An mang một vẻ đẹp kiến trúc truyền thống độc đáo với những ngôi nhà cổ, hội quán và con đường nhỏ yên bình.">Khám Phá</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <a href="places.html" class="btn btn-outline-success btn-lg">Xem Thêm Địa Điểm <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL CHI TIẾT SỰ KIỆN -->
+    <div class="modal fade" id="eventDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEventTitle">Tiêu đề sự kiện</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalEventImg" src="" class="img-fluid rounded mb-3" alt="Hình ảnh sự kiện">
+                    <p><strong><i class="fas fa-map-marker-alt me-2"></i>Địa điểm:</strong> <span id="modalEventLocation">Đây là địa điểm</span></p>
+                    <hr>
+                    <p id="modalEventDescription">Đây là mô tả.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <a href="#" class="btn btn-warning">Đặt Vé Ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CHI TIẾT ĐỊA ĐIỂM -->
+    <div class="modal fade" id="placeDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPlaceTitle">Tên Địa Điểm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalPlaceImg" src="" class="img-fluid rounded mb-3" alt="Hình ảnh địa điểm">
+                    <p id="modalPlaceDescription">Mô tả chi tiết.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+       <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Nhịp Sống Việt</h5>
+                    <p>Cổng thông tin khám phá sự kiện, địa điểm, ẩm thực và văn hóa Việt Nam.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Khám Phá</h5>
+                    <p><a href="events.html" class="text-white" style="text-decoration: none;">Sự Kiện</a></p>
+                    <p><a href="places.html" class="text-white" style="text-decoration: none;">Địa Điểm</a></p>
+                    <p><a href="food.html" class="text-white" style="text-decoration: none;">Ẩm Thực</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Liên Hệ</h5>
+                    <p><i class="fas fa-home me-3"></i> Đồng Nai, Việt Nam</p>
+                    <p><i class="fas fa-envelope me-3"></i> contact@nhipsongviet.vn</p>
+                    <p><i class="fas fa-phone me-3"></i> + 84 123 456 789</p>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2025 Bản quyền thuộc về: <a href="#" style="text-decoration: none;"><strong class="text-warning">Nhịp Sống Việt</strong></a></p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

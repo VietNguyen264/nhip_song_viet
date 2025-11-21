@@ -1,10 +1,7 @@
-// File: script.js (Bản cập nhật cuối cùng cho toàn bộ dự án)
 
 $(document).ready(function() {
 
-    // =======================================================
     // LOGIC CHO BỘ LỌC SỰ KIỆN (TRANG EVENTS.HTML)
-    // =======================================================
     function filterEvents() {
         let category = $('#filter-category').val();
         let city = $('#filter-city').val();
@@ -40,10 +37,7 @@ $(document).ready(function() {
         $('#filter-keyword').on('keyup', filterEvents);
     }
 
-
-    // =======================================================
     // LOGIC CHO VALIDATE FORM LIÊN HỆ (TRANG CONTACT.HTML)
-    // =======================================================
     $('#contact-form').on('submit', function(event) {
         event.preventDefault();
 
@@ -73,12 +67,9 @@ $(document).ready(function() {
             $('#contact-form-container').hide();
             $('#success-message').fadeIn();
         }
-    });
-
-
-    // =======================================================
+    })
+    
     // LOGIC CẬP NHẬT NỘI DUNG CHO CÁC MODAL
-    // =======================================================
 
     // 1. Modal Chi Tiết Sự Kiện (Trang events.html)
     $('.event-detail-btn').on('click', function() {
